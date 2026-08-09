@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Астория — Главная</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">Астория</div>
+    <div class="user-panel" id="user-panel">
+      <!-- Заполняется динамически через JS -->
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="create-post-box" id="create-post-box" style="display: none;">
+      <h3>Создать публикацию</h3>
+      <input type="text" id="post-title" placeholder="Заголовок поста">
+      <textarea id="post-content" placeholder="Напишите что-нибудь..."></textarea>
+      <button id="publish-btn" class="btn">Опубликовать</button>
+    </section>
+
+    <section class="feed">
+      <h2>Лента сообщений</h2>
+      <div id="posts-container">
+        <p class="status-msg">Загрузка постов...</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Модальное окно профиля -->
+  <div id="profile-modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="close-modal" class="modal-close">&times;</span>
+      <h3>Ваш профиль</h3>
+      <div class="profile-card">
+        <div class="profile-avatar-placeholder" id="modal-avatar">A</div>
+        <div class="profile-details">
+          <p class="profile-display-name" id="modal-display-name">-</p>
+          <p class="profile-username" id="modal-username">@-</p>
+          <small class="profile-id" id="modal-user-id">ID: -</small>
+        </div>
+      </div>
+      <button id="modal-logout-btn" class="btn btn-secondary full-width">Выйти из аккаунта</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
