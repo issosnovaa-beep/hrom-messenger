@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Хром — Регистрация</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Хром</h1>
+      <p>Платформа для общения</p>
+    </header>
+
+    <!-- Форма регистрации -->
+    <div id="auth-box" class="card">
+      <h2>Регистрация</h2>
+      <form id="register-form">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="example@mail.com" required>
+        </div>
+
+        <div class="input-group">
+          <label for="password">Пароль</label>
+          <input type="password" id="password" placeholder="••••••••" required>
+        </div>
+
+        <div class="input-group">
+          <label for="username">Имя пользователя (Username)</label>
+          <input type="text" id="username" placeholder="user123" required>
+        </div>
+
+        <div class="input-group">
+          <label for="nickname">Никнейм</label>
+          <input type="text" id="nickname" placeholder="Мое Имя" required>
+        </div>
+
+        <button type="submit" class="btn">Зарегистрироваться</button>
+      </form>
+    </div>
+
+    <!-- Профиль после регистрации -->
+    <div id="profile-box" class="card hidden">
+      <h2>Добро пожаловать!</h2>
+      <div class="profile-info">
+        <p><strong>Ваш ID:</strong> #<span id="user-id"></span></p>
+        <p><strong>Email:</strong> <span id="user-email"></span></p>
+        <p><strong>Юзернейм:</strong> @<span id="user-username"></span></p>
+        <p><strong>Никнейм:</strong> <span id="user-nickname"></span></p>
+      </div>
+      <button id="logout-btn" class="btn btn-secondary">Выйти</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
