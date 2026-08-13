@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astoria</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #111111;
+            min-height: 100vh;
+            transition: 0.3s;
+        }
+
+        body.dark {
+            background: #111111;
+            color: #ffffff;
+        }
+
+        header {
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 25px;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            background: inherit;
+        }
+
+        body.dark header {
+            border-color: #333;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .theme-button {
+            border: none;
+            background: #eeeeee;
+            color: #111;
+            padding: 10px 16px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        body.dark .theme-button {
+            background: #292929;
+            color: white;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #666;
+            margin-bottom: 35px;
+        }
+
+        body.dark .hero p {
+            color: #aaa;
+        }
+
+        .start-button {
+            border: none;
+            background: #111111;
+            color: white;
+            padding: 14px 25px;
+            border-radius: 14px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        body.dark .start-button {
+            background: white;
+            color: #111;
+        }
+
+        .card {
+            margin-top: 60px;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            text-align: left;
+        }
+
+        body.dark .card {
+            border-color: #333;
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+        body.dark .card p {
+            color: #aaa;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #888;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            header {
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Astoria</div>
+
+        <button class="theme-button" onclick="changeTheme()">
+            🌙 Тёмная тема
+        </button>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h1>Добро пожаловать в Astoria</h1>
+
+            <p>
+                Новая социальная сеть для общения,
+                публикаций и общения с людьми.
+            </p>
+
+            <button class="start-button">
+                Начать
+            </button>
+        </section>
+
+        <section class="card">
+            <h2>Astoria уже скоро</h2>
+
+            <p>
+                Здесь появятся профили пользователей,
+                публикации, комментарии, сообщения,
+                подписки и многое другое.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 Astoria
+    </footer>
+
+    <script>
+        function changeTheme() {
+            document.body.classList.toggle("dark");
+
+            const button = document.querySelector(".theme-button");
+
+            if (document.body.classList.contains("dark")) {
+                button.textContent = "☀️ Светлая тема";
+            } else {
+                button.textContent = "🌙 Тёмная тема";
+            }
+        }
+    </script>
+
+</body>
+</html>
